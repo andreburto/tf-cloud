@@ -26,7 +26,7 @@ provider "aws" {
 }
 
 locals {
-  domain_url = "tf-cloid-mothersect.info"
+  domain_url = "tf-cloud.mothersect.info"
 }
 
 resource "aws_s3_bucket" "tf_cloud" {
@@ -37,7 +37,7 @@ resource "aws_s3_bucket_ownership_controls" "tf_cloud" {
   bucket = aws_s3_bucket.tf_cloud.id
 
   rule {
-    object_ownership = "BucketOwnerEnforced"
+    object_ownership = "BucketOwnerPreferred"
   }
 }
 
