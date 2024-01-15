@@ -37,7 +37,7 @@ resource "aws_s3_bucket_ownership_controls" "tf_cloud" {
   bucket = aws_s3_bucket.tf_cloud.id
 
   rule {
-    object_ownership = "BucketOwnerPreferred"
+    object_ownership = "BucketOwnerEnforced"
   }
 }
 
